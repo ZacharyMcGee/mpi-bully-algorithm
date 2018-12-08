@@ -162,7 +162,7 @@ int main(int argc, char *argv[]) {
 						// Check if we will participate, same method as the leader uses
 						// If yes, generate token and check my values against current received
 						mytoken = generate_token();
-						if ((mytoken > recv_buf[1]) || ((mytoken == msg[1]) && (myrank > msg[0])))
+						if ((mytoken > recv_buf[1]) || ((mytoken == recv_buf[1]) && (myrank > recv_buf[0])))
 						{
 								recv_buf[0] = myrank;
 								recv_buf[1] = mytoken;
